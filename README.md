@@ -1,12 +1,12 @@
-## HỆ THỐNG QUẢN LÝ ỨNG CỬ VIÊN
+## Restaurant_App
 # Kiến thức áp dụng
-HTML
-CSS
-JavaScript: Array, Array Methods, Functions, Class, Object
-DOM
-Local Storage
+1. HTML
+2. CSS
+3. JavaScript: Array, Array Methods, Functions, Class, Object
+4. DOM
+5. Local Storage
 # Theme
-https://www.pinterest.com/pin/847028642423342876/?nic_v3=1a58C3D1Y
+1. https://www.pinterest.com/pin/847028642423342876/?nic_v3=1a58C3D1Y
 # Thành quả
-Link git: https://github.com/Exitw3/Restaurant_App
-Link sản phẩm: https://exitw3.github.io/Restaurant_App/
+1. Link git: https://github.com/Exitw3/Restaurant_App
+2. Link sản phẩm: https://exitw3.github.io/Restaurant_App/
