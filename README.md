@@ -6,7 +6,7 @@
 4. DOM
 5. Local Storage
 # Theme
-1. https://www.pinterest.com/pin/847028642423342876/?nic_v3=1a58C3D1Y
+1. https://www.danang.intercontinental.com/vn/dining/la-maison-1888/
 # Thành quả
 1. Link git: https://github.com/Exitw3/Restaurant_App
 2. Link sản phẩm: https://exitw3.github.io/Restaurant_App/
