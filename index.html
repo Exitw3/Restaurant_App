@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web bán thức ăn </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a href="" class="logo">
+                <img src="images/logo2.png" alt="" width="100px">
+            </a>
+            <div id="menu">
+                <div class="item">
+                    <a onclick="addHomepage()">Trang chủ</a>
+                </div>
+                <div class="item">
+                    <a onclick="addProduct()">Sản phẩm</a>
+                </div>
+                <div class="item">
+                    <a onclick="addBlog()">Blog</a>
+                </div>
+                <div class="item">
+                    <a>Liên hệ</a>
+                </div>
+                <div class="item">
+                    <a href="">Đặt bàn</a>
+                </div>
+            </div>
+            <div id="actions">
+                <div class="item">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="images/cart.png" alt="">
+                </div>
+                <div class="item">
+                    <a href="https://www.facebook.com/LM1888/"><img src="images/fb.png" alt="" width="22px"></a>
+                </div>
+            </div>
+        </div>
+        <div class="homepage" id="btn-add-product">
+            <div id="banner">
+                <div class="box-left">
+                    <h2>
+                        <span>THỨC ĂN</span>
+                        <br>
+                        <span>THƯỢNG HẠNG</span>
+                    </h2>
+                    <p>Chuyên cung cấp các món ăn đảm bảo dinh dưỡng
+                        hợp vệ sinh đến người dùng,phục vụ người dùng 1 cái
+                        hoàn hảo nhất</p>
+                    <button>Mua ngay</button>
+                </div>
+                <div class="box-right">
+                    <img src="images/img_1.png" alt="">
+                    <img src="images/img_2.png" alt="">
+                    <img src="images/img_3.png" alt="">
+                </div>
+            </div>
+            <div id="slogan">
+                <div class="box-slogan">
+                    <div class="box-left">
+                        <div class="cenner">
+                            <center>
+                                <h2>LỜI NGÕ</h2>
+                            </center>
+                        </div>
+                        <div><br></div>
+                        <div>
+                            <center>
+                                <p>
+                                <h4>Luôn đặt mình vào vị trí của khách hàng, lắng nghe và thấu hiểu chính là nền
+                                    tảng để Nhà Hàng Vườn Cau tạo nên một chất lượng dịch vụ hoàn hảo. Hãy để chúng
+                                    tôi luôn đồng hành và mang lại cho bạn một sự kiện ẤN TƯỢNG và TRỌN VẸN nhất.
+                                    </h5>
+                                    </p>
+                            </center>
+                        </div>
+                        <div><br></div>
+                        <div class="intro">
+                            <center><button>Xem giới thiệu</button></center>
+                        </div>
+                    </div>
+                    <div class="box-right">
+                        <div><img src="images/slogan.jpg" alt="" width="100%"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="wp-products">
+                <div>
+                    <center>
+                        <h2>BEST SELLER</h2>
+                    </center>
+                    <div>
+                        <ul id="list-products">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="saleoff">
+                <div class="box-left">
+                    <h1>
+                        <span>GIẢM GIÁ LÊN ĐẾN</span>
+                        <span>45%</span>
+                    </h1>
+                </div>
+                <div class="box-right"></div>
+            </div>
+            <div id="comment">
+                <h2>NHẬN XÉT CỦA KHÁCH HÀNG</h2>
+                <div id="comment-body">
+                    <div class="prev">
+                        <a href="#">
+                            <img src="images/prev.png" alt="">
+                        </a>
+                    </div>
+                    <ul id="list-comment">
+
+                    </ul>
+                    <div class="next">
+                        <a href="#">
+                            <img src="images/next.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product" id="form-edit-products">
+            <div class="row">
+                <div class="create-area">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="name">Image</label>
+                            <input class="form-control" type="url" id="images">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Dish</label>
+                            <input class="form-control" type="text" id="dishs">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="name">Describe</label>
+                            <input class="form-control" type="text" id="describes">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Price</label>
+                            <input class="form-control" type="number" id="moneys">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button onclick="save()" class="btn btn-dark">Create</button>
+                        <button id="btnUpdate" onclick="updateProduct()" class="btn btn-danger d-none">Save</button>
+                        <button onclick="resetForm()" class="btn btn-warning">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div id="list-praduct">
+
+            </div>
+            <div class="row">
+                <div class="paging-area">
+                    <div id="pagination">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog" id="blog">
+            <div id="list-blog">
+                <div class="item">
+                    <a
+                        href="https://www.foody.vn/bai-viet/toan-quoc-la-maison-1888-cua-viet-nam-lot-top-4-nha-hang-dep-nhat-the-gioi-408">
+                        <img src="images/slogan2.jpg" alt="">
+                        <div class="desc">(Toàn quốc) La Maison 1888 của Việt Nam lọt "Top" 4 nhà hàng đẹp nhất thế giới
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a
+                        href="https://mia.vn/cam-nang-du-lich/la-maison-1888-co-gi-trong-nha-hang-sieu-sang-chanh-lot-top-tot-nhat-the-gioi-o-da-nang-1739">
+                        <img src="https://th.bing.com/th/id/R.8b1f4ed67973cddb31b365b678274334?rik=sY0%2f0iTUnUkFqQ&pid=ImgRaw&r=0"
+                            alt="">
+                        <div class="desc">La Maison 1888 - Có gì trong nhà hàng siêu sang chảnh lọt top tốt nhất thế
+                            giới ở Đà Nẵng?</div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a
+                        href="hhttps://dulich.tuoitre.vn/nha-hang-la-maison-1888-noi-tieng-the-gioi-tai-intercontinental-danang-sun-peninsula-resort-20211011104656731.htm">
+                        <img src="https://cdn.tuoitre.vn/2021/10/11/khong-gian-sang-trong-ben-trong-nha-hang-la-maison-1988-163392341015972879483.jpg"
+                            alt="">
+                        <div class="desc">Nhà hàng La Maison 1888 nổi tiếng thế giới tại InterContinental Danang Sun
+                            Peninsula Resort</div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a
+                        href="https://www.foody.vn/bai-viet/toan-quoc-la-maison-1888-cua-viet-nam-lot-top-4-nha-hang-dep-nhat-the-gioi-408">
+                        <img src="images/db.jpg" alt="">
+                        <div class="desc">La Maison 1888 chào đón sự trở lại của đầu bếp 3 sao Michelin Pierre Gagnaire
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="contact" id="contact">
+            <div class="list-contrct">
+                <div>
+                    <center>
+                        <h1>LIÊN HỆ</h1>
+                    </center>
+                </div>
+                <div>
+                    <center>
+                        <p>Vui lòng để lại tin nhắn và thông tin liên hệ của Quý khách bên dưới. Nhân viên của chúng tôi
+                            sẽ trả lời Quý khách trong thời gian sớm nhất.</p>
+                    </center>
+                </div>
+            </div>
+            <div class="new-contact">
+                <div class="inbox-contact">
+                    <div class="inbox-inbox">
+                        <label class="label">Liên Hệ</label>
+                        <input type="text"><br>
+                        <label class="label">Gmail</label>
+                        <input type="gamil"><br>
+                        <label class="label">Số Điện thoại</label>
+                        <input type="number"><br>
+                    </div>
+                    <textarea type="text">Lời nhắn</textarea>
+                    <button>Gửi</button>
+                </div>
+                <div class="location">
+                    <div>
+                        <h1>
+                            <center>Địa chỉ Resort</center>
+                        </h1>
+                    </div>
+                    <div></div>
+                    <div>
+                        <center><strong>INTERCONTINENTAL DANANG SUN PENINSULA RESORT</strong></center>
+                    </div>
+                    <div></div>
+                    <div>
+                        <center>Bán Đảo Sơn Trà, Đà Nẵng, 550000, Việt Nam</center>
+                    </div>
+                    <div></div>
+                    <div>
+                        <center>T. +84 236 393 8888 F. +84 236 939 8887</center>
+                    </div>
+                    <div></div>
+                    <div>
+                        <center>E. reservations.icdanang@ihg.com</center>
+                    </div>
+                </div>
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3832.909039846345!2d108.30393375034096!3d16.122005588793566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31423d8a86291275%3A0xd03d25d2195d799!2sLa%20Maison%201888!5e0!3m2!1svi!2s!4v1664792147399!5m2!1svi!2s"
+                        width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section">
+            <div class="show">
+                <div>
+                    <center>
+                        <h1>Đặt Bàn</h1>
+                    </center>
+                </div>
+                <table class="order">
+                    <tbody>
+                        <tr>
+                            <th>Day</th>
+                            <th>Name</th>
+                        </tr>
+                        <tr>
+                            <td><input type="date"></td>
+                            <td><input type="text"></td>
+
+                        </tr>
+                        <tr>
+                            <th>Time</th>
+                            <th>Phone Number</th>
+
+                        </tr>
+                        <tr>
+                            <td><input type="time"></td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <th>Number Of People</th>
+                            <th>Email</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button>Đặt Bàn</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="box">
+                <div class="logo">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách</p>
+            </div>
+            <div class="box">
+                <h3>NỘI DUNG</h3>
+                <ul class="quick-menu">
+                    <div class="item">
+                        <a href="">Trang chủ</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Sản phẩm</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Blog</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Liên hệ</a>
+                    </div>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>LIÊN HỆ</h3>
+                <form action="">
+                    <input type="text" placeholder="Địa chỉ email">
+                    <button>Nhận tin</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="bestseller.js"></script>
+</body>
+
+</html>
